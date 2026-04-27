@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Cliente - WA10 Soluções Contábeis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+        
+    <nav>
+        <div class="nav-conteudo" style="">
+            <a href="index.html" class="logo-menu">
+                <img class="logo-menu" src="Icones/Logo.svg" alt="Logo WA10">
+            </a>
+            
+            <div class="menu-links">
+                <span style="color: white; font-family: 'Inter'; font-size: 1rem; margin-right: 15px;">
+                    Olá, <strong>Cliente</strong>
+                </span>
+                <a href="login.html" class="btn-sair">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="pag-portal">
+        
+        <div class="portal-header">
+            <div>
+                <h2>Meus Documentos</h2>
+                <p>
+                    Gerencie seus envios e downloads fiscais.
+                </p>
+            </div>
+            <button class="botao-acao">
+                <i class="fa-solid fa-cloud-arrow-up"></i> Novo Envio
+            </button>
+        </div>
+
+        <div class="lista-docs-container">
+            
+            <div class="doc-header">
+                <div>Nome do Arquivo</div>
+                <div>Tipo</div>
+                <div>Data</div>
+                <div>Status</div>
+                <div style="text-align: right;">Ações</div>
+            </div>
+
+            <div class="doc-item">
+                <div class="doc-col" data-label="Arquivo">
+                    <span class="file-icon"><i class="fa-solid fa-file-pdf"></i></span>
+                    Comprovante_Renda_Jan.pdf
+                </div>
+                <div class="doc-col" data-label="Tipo">Comprovante de Renda</div>
+                <div class="doc-col" data-label="Data">03/12/2025</div>
+                <div class="doc-col" data-label="Status">
+                    <span class="status enviado">Enviado</span>
+                </div>
+                <div class="doc-col acoes" data-label="Ações">
+                    <button class="btn-icon" title="Baixar"><i class="fa-solid fa-download"></i></button>
+                    <button class="btn-icon" title="Editar" style="color: #f39c12;"><i class="fa-solid fa-pen"></i></button>
+                    <button class="btn-icon" title="Excluir" style="color: #dc3545;"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+
+            <div class="doc-item">
+                <div class="doc-col" data-label="Arquivo">
+                    <span class="file-icon"><i class="fa-solid fa-file-lines"></i></span>
+                    Declaracao_IRPF_Final.pdf
+                </div>
+                <div class="doc-col" data-label="Tipo">Declaração Final</div>
+                <div class="doc-col" data-label="Data">01/12/2025</div>
+                <div class="doc-col" data-label="Status">
+                    <span class="status pendente">Processando</span>
+                </div>
+                <div class="doc-col acoes" data-label="Ações">
+                    <button class="btn-icon" title="Baixar"><i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+
+            <div class="doc-item">
+                <div class="doc-col" data-label="Arquivo">
+                    <span class="file-icon"><i class="fa-solid fa-image"></i></span>
+                    Recibo_Medico_Unimed.jpg
+                </div>
+                <div class="doc-col" data-label="Tipo">Despesa Médica</div>
+                <div class="doc-col" data-label="Data">28/11/2025</div>
+                <div class="doc-col" data-label="Status">
+                    <span class="status enviado">Enviado</span>
+                </div>
+                <div class="doc-col acoes" data-label="Ações">
+                    <button class="btn-icon" title="Baixar"><i class="fa-solid fa-download"></i></button>
+                    <button class="btn-icon" title="Excluir" style="color: #dc3545;"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Todos os direitos reservados <strong>Eduardo Soares</strong> e <strong>Guidson Barreto</strong> 2025</p>
+    </footer>
+
+</body>
+</html>
