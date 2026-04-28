@@ -1,13 +1,20 @@
-package com.wa10.api.model;
+@Entity
+public class Documento {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; // ID interno para o banco
 
-import java.time.LocalDate;
+    @Column(unique = true, nullable = false)
+    private String uuid = UUID.randomUUID().toString(); // ID público para URLs
 
-public class Documento extends BaseEntity{
-	
-	private String nomeArquivo;
-	private String caminhoArquivo;
-	private Usuario proprietario;
-	private TipoDocumento tipoDocumento;
+    private String nomeOriginal;
+    private String pathArmazenamento;
+    private String contentType;
+    private String checksum; // Hash SHA-256 do arquivo
+
+    @ManyToOne
+    private Usuario proprietario;
+    
+}
 	
 	public Documento(Long id, String nomeArquivo, String caminhoArquivo, LocalDate dataEnvio, Usuario proprietario, TipoDocumento tipoDocumento) {
 		super(id);
@@ -53,4 +60,4 @@ public class Documento extends BaseEntity{
 	}
 
 
-}
+
